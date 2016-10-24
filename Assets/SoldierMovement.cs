@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SoldierMovement : MonoBehaviour {
-
+	public ParticleSystem Blood;
 	bool MovementSoldier = true;
 	float timer = 6f;
 	bool isReloading = false;
@@ -60,8 +60,8 @@ public class SoldierMovement : MonoBehaviour {
 
 		if(other.gameObject.tag == "Arrow")
 		{
-			Destroy (this.gameObject);
-
+			Destroy (this.gameObject,1);
+			Blood.Play ();
 
 		}
 	
