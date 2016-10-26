@@ -36,11 +36,25 @@ public class UIManager : MonoBehaviour
 		healthBar.sprite = healthBarArray [healthBarCount];
 	}
 
+	public void HealDamage(){
+
+		healthBarCount = 0;
+		healthBar.sprite = healthBarArray [healthBarCount];
+	}
+
 	void OnTriggerEnter (Collider other) {
 
 		if(other.gameObject.tag == "Fireball")
 		{
 			TakeDamage ();
+		}
+
+		if(other.gameObject.tag == "Blood")
+		{
+			HealDamage();
+			Destroy (other.gameObject, 1);
+			 
+		 
 		}
 
 }
