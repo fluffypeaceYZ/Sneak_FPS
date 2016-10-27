@@ -10,6 +10,7 @@ public class Arrow_Script : MonoBehaviour {
 		public static Vector3 initialPosition;
 		public static Quaternion initialRotation;
 		public static Arrow_Script currentArrow;
+	public ParticleSystem Trail;
 		
 	 
 	 
@@ -31,7 +32,11 @@ public class Arrow_Script : MonoBehaviour {
 
 		void Update() {
 
+		Destroy (this.gameObject, 10);
+
+
 		if (currentArrow != this)
+			
 			return;
 
 		if (Input.GetMouseButtonDown(0)){
@@ -41,6 +46,7 @@ public class Arrow_Script : MonoBehaviour {
 			rb.AddForce(direction, ForceMode.Impulse);
 			transform.parent = null;
 			isReloading = true;
+			Trail.Play ();
 
 			 
 		}
