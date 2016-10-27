@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
 		{
 			TakeDamage ();
 		}
+	
+	
 	}
 
 	public void TakeDamage()
