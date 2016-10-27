@@ -32,7 +32,7 @@ public class Arrow_Script : MonoBehaviour {
 
 		void Update() {
 
-		Destroy (this.gameObject, 10);
+	 
 
 
 		if (currentArrow != this)
@@ -54,7 +54,7 @@ public class Arrow_Script : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0)){
 
 		 
-
+			Destroy (this.gameObject, 10);
 
 		}
 
