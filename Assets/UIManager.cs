@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -21,7 +22,15 @@ public class UIManager : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.P))
 		{
 			TakeDamage ();
+
+
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+
+			SceneManager.LoadScene ("Sneak_FPS");
+
+			}
 	
 	
 	}
