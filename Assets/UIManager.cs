@@ -19,12 +19,12 @@ public class UIManager : MonoBehaviour
 	
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.P))
+		/*if (Input.GetKeyDown (KeyCode.P))
 		{
 			TakeDamage ();
 
 
-		}
+		}*/
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 
