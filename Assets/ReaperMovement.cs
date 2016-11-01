@@ -6,6 +6,7 @@ public class ReaperMovement : MonoBehaviour {
 	bool MovementSoldier = true;
 	float timer = 3f;
 	bool isReloading = false;
+	int reaperHealth = 4;
 	// Use this for initialization
 	void Start () {
 
@@ -14,13 +15,18 @@ public class ReaperMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if(reaperHealth <= 0){
+
+			Destroy (this.gameObject, 1);
+		}
+
 		if (MovementSoldier == true){
 
-			transform.position += new Vector3 (6f, 0, 0) * Time.deltaTime;
+			transform.position += new Vector3 (20f, 0, 0) * Time.deltaTime;
 		}
 		if (MovementSoldier == false){
 
-			transform.position -= new Vector3 (6f, 0, 0)* Time.deltaTime;
+			transform.position -= new Vector3 (20f, 0, 0)* Time.deltaTime;
 		}
 		if (timer > 0) {
 			timer -= Time.deltaTime;
@@ -60,7 +66,7 @@ public class ReaperMovement : MonoBehaviour {
 
 		if(other.gameObject.tag == "Arrow")
 		{
-			Destroy (this.gameObject,1);
+			reaperHealth--;
 			Blood.Play ();
 
 		}
