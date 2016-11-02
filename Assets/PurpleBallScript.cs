@@ -28,7 +28,16 @@ public class PurpleBallScript : MonoBehaviour {
 		// translate projectile in its forward direction:
 		myTransform.Translate(Vector3.forward * amtToMove);
 
-		Destroy(this.gameObject, 4);
+		Destroy(this.gameObject, 6);
 
+	}
+
+	void OnTriggerEnter (Collider other) {
+
+		if(other.gameObject.tag == "MainCamera")
+		{
+
+			Destroy (this.gameObject);
+		}
 	}
 }
