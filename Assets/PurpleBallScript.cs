@@ -34,7 +34,7 @@ public class PurpleBallScript : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 
-		if(other.gameObject.tag == "MainCamera")
+		if(other.gameObject.tag == "Firewall")
 		{
 
 			Destroy (this.gameObject);
