@@ -6,7 +6,7 @@ public class ReaperMovement : MonoBehaviour {
 	bool MovementSoldier = true;
 	float timer = 3f;
 	bool isReloading = false;
-	int reaperHealth = 4;
+	int reaperHealth = 6;
 	// Use this for initialization
 	void Start () {
 
