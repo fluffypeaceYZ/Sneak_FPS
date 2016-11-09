@@ -60,7 +60,11 @@ public class SoldierMovement : MonoBehaviour {
 
 		if(other.gameObject.tag == "Arrow")
 		{
+			GameObject bPrefab = Instantiate(Resources.Load("ToonRTS_demo_knight 1"), new Vector3(transform.position.x, transform.position.y , transform.position.z), transform.rotation) as GameObject;
+			GameObject cPrefab = Instantiate(Resources.Load("ToonRTS_demo_knight 2"), new Vector3(transform.position.x, transform.position.y , transform.position.z), transform.rotation) as GameObject;
+
 			Destroy (this.gameObject,1);
+			
 			Blood.Play ();
 
 		}
