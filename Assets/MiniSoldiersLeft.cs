@@ -18,11 +18,11 @@ public class MiniSoldiersLeft : MonoBehaviour {
 
 		if (MovementSoldier == true){
 
-			transform.position -= new Vector3 (4f, 0, 0) * Time.deltaTime;
+			transform.position -= new Vector3 (2f, 0, 0) * Time.deltaTime;
 		}
 		if (MovementSoldier == false){
 
-			transform.position += new Vector3 (4f, 0, 0)* Time.deltaTime;
+			transform.position += new Vector3 (2f, 0, 0)* Time.deltaTime;
 		}
 		if (timer > 0) {
 			timer -= Time.deltaTime;
