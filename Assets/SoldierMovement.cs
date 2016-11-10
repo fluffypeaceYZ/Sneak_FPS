@@ -6,6 +6,7 @@ public class SoldierMovement : MonoBehaviour {
 	bool MovementSoldier = true;
 	float timer = 6f;
 	bool isReloading = false;
+	public GameObject EnemyParent;
 	// Use this for initialization
 	void Start () {
 		
@@ -47,7 +48,7 @@ public class SoldierMovement : MonoBehaviour {
 		if(other.gameObject.tag == "Right")
 		{
 			MovementSoldier = false;
-			print ("Touched Right");
+			//print ("Touched Right");
 			 
 
 		}
@@ -60,11 +61,14 @@ public class SoldierMovement : MonoBehaviour {
 
 		if(other.gameObject.tag == "Arrow")
 		{
+			
+			Destroy (this.gameObject,1);
 			GameObject bPrefab = Instantiate(Resources.Load("ToonRTS_demo_knight 1"), new Vector3(transform.position.x, transform.position.y , transform.position.z), transform.rotation) as GameObject;
 			GameObject cPrefab = Instantiate(Resources.Load("ToonRTS_demo_knight 2"), new Vector3(transform.position.x, transform.position.y , transform.position.z), transform.rotation) as GameObject;
+			bPrefab.transform.parent = EnemyParent.transform;
+			cPrefab.transform.parent = EnemyParent.transform;
 
-			Destroy (this.gameObject,1);
-			
+
 			Blood.Play ();
 
 		}

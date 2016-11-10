@@ -53,7 +53,7 @@ public class ReaperMovement : MonoBehaviour {
 		if(other.gameObject.tag == "Right")
 		{
 			MovementSoldier = false;
-			print ("Touched Right");
+			//print ("Touched Right");
 
 
 		}

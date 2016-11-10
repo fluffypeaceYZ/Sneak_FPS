@@ -63,7 +63,7 @@ public class MiniSoldiers : MonoBehaviour {
 		if(other.gameObject.tag == "Arrow")
 		{
 			
-			Destroy (this.gameObject,1);
+			Destroy (this.gameObject);
 
 			Blood.Play ();
 
